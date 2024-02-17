@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #ff817E;
+    }
+
+    h1, h2, h3 {
+      color: green;
+      text-align: center;
+    }
+
+    li {
+      color: white;
+    }
+
+    header, footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    main {
+      overflow: hidden;
+    }
+
+    .content-container {
+      background: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .product-section {
+      margin-bottom: 30px;
+    }
+
+    .product {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-bottom: 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .product img {
+      width: 100%;
+      max-width: 200px;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    .add-to-cart {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .add-to-cart:hover {
+      background-color: #45a049;
+    }
+
+    .cart-counter {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background-color: #4CAF50;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 50%;
+    }
+
+    .popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #333;
+      color: #fff;
+      padding: 15px;
+      border-radius: 5px;
+      display: none;
+    }
+
+    .counter-display {
+      margin-top: 10px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>WELCOME TO KRRITIN ORCHID</h1>
+    <nav>
+      <a href="file:///C:/Users/agarw/OneDrive/Desktop/index.html">Home</a> |
+      <a href="file:///C:/Users/agarw/OneDrive/Desktop/products.html">Products</a> |
+      <a href="file:///C:/Users/agarw/OneDrive/Desktop/about_us.html">About Us</a> |
+      <a href="file:///C:/Users/agarw/OneDrive/Desktop/contact_us.html">Contact_Us</a>
+    </nav>
+    <div class="cart-counter" id="cartCounter">0</div>
+  </header>
+
+  <main>
+    <div class="content-container">
+      <h2>Apple Products</h2>
+
+      <section class="product-section">
+        <div class="product">
+          <h3>DARK BARON GALA</h3>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQlwsNucOy1esx3bPidWWbMTnQj_0RosiCx2XczcuIlcM9dXEheQM76T4jTQ71y-kRcJm0&usqp=CAU" alt="Dark Baron Gala Apple">
+          <p>A delicious apple with a perfect balance of sweetness and tartness. Ideal for snacking and salads.</p>
+          <input type="range" id="darkBaronGala" name="darkBaronGala" value="1">
+          <button class="add-to-cart" onclick="addToCart('Dark Baron Gala', 'darkBaronGala')">Add to Cart</button>
+          <div class="counter-display" id="darkBaronGalaDisplay">Box Counter: 1</div>
+        </div>
+      </section>
+
+      <section class="product-section">
+        <div class="product">
+          <h3>Red Velox</h3>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXZPiwQsdk6L9U7ia1DktARKraCM5uGO5Zfp4yVVrc0g&s" alt="Red Velox Apple">
+          <p>Known for its vibrant red color and crisp texture, the Red Velox apple is a favorite for fresh eating.</p>
+          <input type="range" id="redVelox" name="redVelox" value="1">
+          <button class="add-to-cart" onclick="addToCart('Red Velox', 'redVelox')">Add to Cart</button>
+          <div class="counter-display" id="redVeloxDisplay">Box Counter: 1</div>
+        </div>
+      </section>
+
+      <section class="product-section">
+        <div class="product">
+          <h3>Golden Delicious</h3>
+          <img src="https://media.istockphoto.com/id/163670019/photo/yellow-golden-apple.jpg?s=612x612&w=0&k=20&c=VXbShkKGzKKuvS9B9iadU5TgkLBGwPYx_4nPEqJefdA=" alt="Golden Delicious Apple">
+          <p>A classic apple variety with a sweet and mellow flavor. Great for baking and making cider.</p>
+          <input type="range" id="goldenDelicious" name="goldenDelicious" value="1">
+          <button class="add-to-cart" onclick="addToCart('Golden Delicious', 'goldenDelicious')">Add to Cart</button>
+          <div class="counter-display" id="goldenDeliciousDisplay">Box Counter: 1</div>
+        </div>
+      </section>
+
+      <!-- Add more product sections as needed -->
+
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; Designed by Krritin_Sharma</p>
+  </footer>
+
+  <div class="popup" id="popup">Item added to cart!</div>
+
+  <script>
+    let cartCounter = 0;
+    const cartCounterElement = document.getElementById('cartCounter');
+    const popupElement = document.getElementById('popup');
+
+    function addToCart(productName, counterId) {
+      const boxCounter = document.getElementById(counterId).value;
+      cartCounter += parseInt(boxCounter);
+      cartCounterElement.textContent = cartCounter;
+      showPopup();
+
+      // You can add additional logic here, such as updating a backend cart or storing in local storage.
+    }
+
+    function showPopup() {
+      popupElement.style.display = 'block';
+      setTimeout(() => {
+        popupElement.style.display = 'none';
+      }, 2000); // Popup disappears after 2 seconds
+    }
+
+    // Update box counter display in real-time
+    document.addEventListener('input', function (e) {
+      if (e.target.type === 'range') {
+        const counterId = e.target.id + 'Display';
+        document.getElementById(counterId).textContent = `Box Counter: ${e.target.value}`;
+      }
+    });
+  </script>
+</body>
+
+</html>

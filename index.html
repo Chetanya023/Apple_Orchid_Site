@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Apple_Orchid</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #ff817E;
+    }
+
+    h1, h2, h3 {
+      color: green;
+      text-align: center;
+    }
+
+    li {
+      color: white;
+    }
+
+    header, footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+    }
+
+    main {
+      overflow: hidden;
+    }
+
+    .content-container {
+      background: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .content-container img {
+      width: 100%;
+      max-width: 600px;
+      display: block;
+      margin: 0 auto;
+      animation: scrollImages 10s infinite;
+    }
+
+    p {
+      margin-bottom: 15px;
+    }
+
+    @keyframes scrollImages {
+      0% {
+        opacity: 0;
+      }
+
+      25% {
+        opacity: 1;
+      }
+
+      75% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+      }
+    }
+  </style>
+  <script lang="javascript">
+    function event_func() {
+      window.location.href = "https://www.tourmyindia.com/blog/apple-orchard-holiday-destinations-india/";
+    }
+
+    function scrollImages() {
+      var images = [
+        "https://res.cloudinary.com/simplotel/image/upload/x_0,y_255,w_4898,h_2755,r_0,c_crop,q_80,fl_progressive/w_825,f_auto,c_fit/the-orchid-hotel-shimla/Apples_2",
+        "https://res.cloudinary.com/simplotel/image/upload/x_0,y_378,w_4032,h_2268,r_0,c_crop,q_80,fl_progressive/w_825,f_auto,c_fit/the-orchid-hotel-shimla/Apples",
+        "https://res.cloudinary.com/simplotel/image/upload/w_5000,h_3333/x_0,y_260,w_5000,h_2813,r_0,c_crop,q_80,fl_progressive/w_825,f_auto,c_fit/the-orchid-hotel-shimla/Apple_garden",
+        "https://res.cloudinary.com/simplotel/image/upload/w_5000,h_2812/x_0,y_0,w_5000,h_2812,r_0,c_crop,q_80,fl_progressive/w_825,f_auto,c_fit/the-orchid-hotel-shimla/Apple_",
+        // Add more image URLs here
+      ];
+
+      var currentImageIndex = 0;
+      var imageElement = document.getElementById("appleImage");
+
+      setInterval(function () {
+        imageElement.src = images[currentImageIndex];
+        currentImageIndex = (currentImageIndex + 1) % images.length;
+      }, 3000);
+    }
+  </script>
+</head>
+
+<body onload="scrollImages()">
+  <header>
+    <h1>WELCOME TO KRRITIN ORCHID</h1>
+    <nav>
+      <a href="./index.html">Home</a> |
+      <a href="./products.html">Products</a> |
+      <a href="./about_us.html">About Us</a> |
+      <a href="./contact_us.html">Contact_Us</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="content-container">
+      <h2>HIMACHAL PRADESH APPLES</h2>
+      <img id="appleImage" src="" alt="Apple Image">
+      <p>
+        <h1>Himachal Pradesh Apples: A Taste of Himalayan Excellence</h1>
+      </p>
+      <p>
+        <h3>Himachal Pradesh, nestled in the pristine Himalayan mountains, is renowned for producing some of the finest apples in India. The apple orchards in this region boast not only breathtaking landscapes but also a rich harvest of flavorful and juicy apples.</h3>
+      </p>
+      <p>
+        <strong>Varieties:</strong><br>
+        Himachal Pradesh is home to various apple varieties, each with its unique taste and texture. Some notable varieties include Dark Baron Gala, Red Velox, and the classic Golden Delicious. These apples are known for their crispness, sweetness, and vibrant colors.
+      </p>
+      <p>
+        <strong>Kritin Orchards:</strong><br>
+        Among the orchards contributing to the authentic taste of Himachal apples is Kritin Orchards. Situated in the lap of nature, Kritin Orchards is dedicated to producing high-quality apples, maintaining the region's legacy of premium fruit cultivation.
+      </p>
+      <p>
+        <strong>Quality Control:</strong><br>
+        The cool climate and high-altitude terrains of Himachal Pradesh create an ideal environment for apple cultivation. The state government and local farmers implement stringent quality control measures to ensure that only the best apples reach consumers.
+      </p>
+      <p>
+        <strong>How to Get Them:</strong><br>
+        If you're eager to savor the goodness of Himachal Pradesh apples, you can order directly from Kritin Orchards. Their online platform provides a convenient way to choose the quantity of apples you desire, whether you're in Himachal Pradesh or beyond.
+      </p>
+      <p>
+        <strong>Experience the Essence:</strong><br>
+        Beyond the delicious taste, Himachal Pradesh apples offer a unique experience. Imagine biting into a freshly picked apple while surrounded by the serene landscapes of the Himalayas. It's not just a fruit; it's a sensory journey.
+      </p>
+      <p>
+        <strong>Subscribe to Stay Connected:</strong><br>
+        Stay updated on the latest offerings and harvest updates by subscribing to newsletters from Kritin Orchards. Whether you're a local resident or a fan from afar, subscribing ensures you don't miss out on the freshest batches of Himachal Pradesh apples.
+      </p>
+      <p>
+        In conclusion, Himachal Pradesh apples are not just a culinary delight; they embody the essence of a region blessed with natural beauty and a commitment to excellence in agriculture. Enjoy the crispness and sweetness of these apples, and let them transport you to the enchanting orchards of the Himalayas.
+      </p>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; Designed by Krritin_Sharma</p>
+  </footer>
+</body>
+
+</html>

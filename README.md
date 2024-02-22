@@ -3,13 +3,13 @@ Himachal Orchid Web Project
 This GitHub repository houses the code for the Himachal Orchid website, a platform dedicated to promoting and selling premium Himachal Pradesh apples. 
 Here's a quick rundown of each section:
 
-Index (index.html)
+INDEX (index.html)
    
 Overview:
 
 • The homepage featuring a navigation bar, a warm welcome message, and a dynamic apple animation using Pygame.
 
-About Us (about_us.html)
+ABOUT US (about_us.html)
 
 Overview:
 
@@ -20,7 +20,7 @@ Features:
 • Responsive design.
 • Contact section with email and phone details.
 
-Contact Us (contact_us.html)
+CONTACT US (contact_us.html)
  
 Overview:
 
@@ -31,7 +31,7 @@ Features:
 • Clean and simple design.
 • Fixed footer with copyright information.
 
-Products (products.html)
+PRODUCTS (products.html)
 
 Overview:
 
